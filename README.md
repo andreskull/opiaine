@@ -81,11 +81,13 @@ npm install
 
 ```bash
 # Terminal 1 - Backend
+# The FastAPI server will start at http://127.0.0.1:8000
+
 python main.py
 
 # Terminal 2 - Frontend
 cd frontend
-npm start
+npm start # React will start at http://localhost:3000
 ```
 
 ## 🔑 Environment Variables
