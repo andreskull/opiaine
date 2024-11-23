@@ -1,1 +1,12 @@
 .env
+__pycache__
+__pycache__/*
+.pytest_cache
+.pytest_cache/*
+.vscode
+.vscode/*
+node_modules/
+
+frontend/node_modules/
+frontend/build/
+frontend/.env
