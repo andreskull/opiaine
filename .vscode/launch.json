@@ -1,0 +1,78 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Backend: FastAPI",
+            "type": "python",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "main:app",
+                "--host",
+                "127.0.0.1",
+                "--port",
+                "8000",
+                "--reload"
+            ],
+            "python": "/Users/andreskull/miniconda3/envs/opi-3.11/bin/python",
+            "jinja": true,
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "VSCODE_DEBUG": "1"
+            }
+        },
+        {
+            "name": "Lecturer App",
+            "type": "python",
+            "request": "launch",
+            "module": "streamlit",
+            "args": [
+                "run",
+                "lecturer_app.py",
+                "--server.port",
+                "8501"
+            ],
+            "python": "/Users/andreskull/miniconda3/envs/opi-3.11/bin/python",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "VSCODE_DEBUG": "1"
+            }
+        },
+        {
+            "name": "Student App",
+            "type": "python",
+            "request": "launch",
+            "module": "streamlit",
+            "args": [
+                "run",
+                "student_app.py",
+                "--server.port",
+                "8502"
+            ],
+            "python": "/Users/andreskull/miniconda3/envs/opi-3.11/bin/python",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "VSCODE_DEBUG": "1"
+            }
+        }
+    ],
+    "compounds": [
+        {
+            "name": "✨ Debug All Components",
+            "configurations": [
+                "Backend: FastAPI",
+                "Lecturer App",
+                "Student App"
+            ],
+            "presentation": {
+                "hidden": false,
+                "group": "main",
+                "order": 1
+            },
+            "stopAll": true
+        }
+    ]
+}
